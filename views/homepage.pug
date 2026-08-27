@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title Practicum Projects
+    link(rel="stylesheet", href="/css/style.css")
+
+  body
+    h1 Practicum Projects
+
+    a(href="/update-cobj") Add to this table
+
+    br
+    br
+
+    table(border="1")
+      thead
+        tr
+          th Name
+          th Description
+          th Project Status
+      tbody
+        if projects && projects.length
+          each project in projects
+            tr
+              td= project.properties.name
+              td= project.properties.description
+              td= project.properties.project_status
+        else
+          tr
+            td(colspan="3") No projects found

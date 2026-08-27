@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title Practicum Projects
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+    h1 Practicum Projects
+
+    if contacts && contacts.length
+      each project in contacts
+        div
+          h2= project.properties.name || 'Unnamed Project'
+          p Record ID: #{project.id}
+    else
+      p No projects found.
+
+    br
+    a(href="/form") Create New Project
