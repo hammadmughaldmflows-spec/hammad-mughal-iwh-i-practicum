@@ -1,0 +1,30 @@
+a(href="/") Return to the homepage
+doctype html
+html
+  head
+    title Practicum Project Form
+  body
+    h1 Create / Update Practicum Project
+
+    form(action="/update-cobj" method="POST")
+      label(for="name") Project Name
+      br
+      input(type="text", name="name", required=true)
+      br
+      br
+
+      label(for="description") Description
+      br
+      input(type="text", name="description")
+      br
+      br
+
+      label(for="project_status") Project Status
+      br
+      select(name="project_status")
+        option(value="active") Active
+        option(value="completed") Completed
+      br
+      br
+
+      button(type="submit") Submit
